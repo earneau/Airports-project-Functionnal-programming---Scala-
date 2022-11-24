@@ -4,6 +4,7 @@ import java.nio.file.{Files, Path}
 import scala.jdk.CollectionConverters.IteratorHasAsScala
 
 
+
 final case class ReadResult[A](lines: Iterator[A], nbInvalidLine: Int)
 
 object CSV {
