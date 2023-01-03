@@ -141,6 +141,35 @@ object Quering {
       println("/// SOME AIRPORTS MIGHT HAVE NO RUNWAYS REGISTERED IN OUR DATABASE ///")
     }
     else{
+      /* select from name column */
+      println(s"You choose to browse by country name : $country")
+      var empty: List[(String, Airport)] = List()
+      var country_found = ""
+
+      countries.foreach{
+        case (key,value) => if (fuzzy_search(country,key)) {country_found = key}
+      } 
+
+      var current_country = countries.get(country_found) match { 
+        case None => Country(0, "error", "error", "error", "error", "error")
+        case Some(value) => value
+      }
+
+      var airports_tri: List[(String, Airport)] = tri_par_pays(airports.toList, current_country.code, empty)
+
+      airports_tri.foreach{
+        case (key_airport, value_airport) => if (current_country.code == value_airport.iso_country) {
+          print("This is airport : " + value_airport.name + " in country : " + country_found + "\n")
+          runways.foreach{
+            case (key_runway, value_runway) => if (key_airport == value_runway.airport_ref) {   /* vérifier qu'il existe des runway pour tel aéroport -> si on a pas de runway on affiche pas*/
+              println(key_runway + " -> " + value_runway)
+            }
+          }
+          println("\n")
+        }
+      }
+
+      println("// SOME AIRPORTS MIGHT HAVE NO RUNWAYS REGISTERED IN OUR DATABASE //")
     }
   }
 }
