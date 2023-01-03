@@ -10,3 +10,170 @@
 2022.11.24 11:17:25 INFO  time: code lens generation in 16s
 2022.11.24 14:22:25 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/GIT/Airports_Project/sampleBasic/src/main/scala/fileReader/service/CSV.scala
 2022.11.24 14:22:32 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/GIT/Airports_Project/sampleBasic/src/main/scala/fileReader/service/CSV.scala
+2022.12.23 13:54:18 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/.metals/lsp.trace.json or /Users/evanarneau/Library/Caches/org.scalameta.metals/lsp.trace.json
+2022.12.23 13:54:20 INFO  logging to file /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/.metals/metals.log
+2022.12.23 13:54:20 INFO  Started: Metals version 0.11.9 in workspace '/Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project' for client Visual Studio Code 1.70.0.
+2022.12.23 13:54:27 INFO  time: initialize in 7.79s
+2022.12.23 13:54:32 WARN  Build server is not auto-connectable.
+2022.12.23 13:54:32 WARN  no build tool detected in workspace '/Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2022.12.23 13:54:32 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/sampleBasic/src/main/scala/fileReader/Main.scala
+2022.12.23 13:54:49 INFO  no build target found for /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/sampleBasic/src/main/scala/fileReader/Main.scala. Using presentation compiler with project's scala-library version: 3.2.0
+2022.12.23 13:54:55 INFO  time: code lens generation in 21s
+2022.12.23 14:20:27 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/TP_MR/src/main/scala/TP_MR.scala
+2022.12.23 14:22:12 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/sampleBasic/build.sbt
+2022.12.23 14:24:21 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/sampleBasic/src/main/scala/fileReader/service/CSV.scala
+2022.12.23 14:24:26 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/sampleBasic/src/main/scala/fileReader/service/CSV.scala
+2022.12.23 14:24:27 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/sampleBasic/src/main/scala/fileReader/Main.scala
+2022.12.23 14:24:29 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/sampleBasic/src/main/scala/fileReader/model/Point.scala
+2022.12.23 14:27:30 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/sampleBasic/src/main/scala/fileReader/Main.scala
+2022.12.23 14:27:43 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/sampleBasic/src/main/scala/fileReader/service/CSV.scala
+déc. 23, 2022 2:29:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 82
+2022.12.23 14:29:12 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/sampleBasic/src/main/scala/fileReader/service/CSV.scala
+2022.12.27 21:10:15 INFO  shutting down Metals
+2023.01.03 09:19:53 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/.metals/lsp.trace.json or /Users/evanarneau/Library/Caches/org.scalameta.metals/lsp.trace.json
+2023.01.03 09:19:55 INFO  logging to file /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/.metals/metals.log
+2023.01.03 09:19:55 INFO  Started: Metals version 0.11.10 in workspace '/Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project' for client Visual Studio Code 1.70.0.
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/Users/evanarneau/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/outr/scribe-slf4j_2.13/3.10.5/scribe-slf4j_2.13-3.10.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2023.01.03 09:19:59 INFO  time: initialize in 3.81s
+2023.01.03 09:20:06 WARN  Build server is not auto-connectable.
+2023.01.03 09:20:06 WARN  no build tool detected in workspace '/Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.01.03 09:20:06 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/TP_MR/src/main/scala/TP_MR.scala
+janv. 03, 2023 9:20:10 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+janv. 03, 2023 9:20:10 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+2023.01.03 09:20:21 INFO  Detected new build tool in /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/.bsp/settings.json
+2023.01.03 09:20:21 INFO  Attempting to connect to the build server...
+2023.01.03 09:20:21 ERROR Failed to connect with build server, no functionality will work.java.lang.NullPointerException: Cannot invoke "String.getBytes(java.nio.charset.Charset)" because the return value of "ch.epfl.scala.bsp4j.BspConnectionDetails.getName()" is null
+	at scala.meta.internal.bsp.BspServers.$anonfun$digestServerDetails$1(BspServers.scala:165)
+	at scala.meta.internal.bsp.BspServers.$anonfun$digestServerDetails$1$adapted(BspServers.scala:164)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at scala.meta.internal.bsp.BspServers.digestServerDetails(BspServers.scala:164)
+	at scala.meta.internal.bsp.BspServers.resolve(BspServers.scala:51)
+	at scala.meta.internal.bsp.BspConnector.$anonfun$resolve$1(BspConnector.scala:47)
+	at scala.Option.getOrElse(Option.scala:201)
+	at scala.meta.internal.bsp.BspConnector.resolve(BspConnector.scala:45)
+	at scala.meta.internal.bsp.BspConnector.connect$1(BspConnector.scala:77)
+	at scala.meta.internal.bsp.BspConnector.connect(BspConnector.scala:127)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$autoConnectToBuildServer$4(MetalsLanguageServer.scala:2449)
+	at scala.meta.internal.metals.TimerProvider.withTimer(TimerProvider.scala:38)
+	at scala.meta.internal.metals.TimerProvider.timed(TimerProvider.scala:14)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$autoConnectToBuildServer$3(MetalsLanguageServer.scala:2449)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:470)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+janv. 03, 2023 9:20:22 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2023.01.03 09:20:23 INFO  no build target found for /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/TP_MR/src/main/scala/TP_MR.scala. Using presentation compiler with project's scala-library version: 3.2.1
+janv. 03, 2023 9:20:26 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2023.01.03 09:23:21 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/build.sbt
+2023.01.03 09:23:21 INFO  skipping build import with status 'Dismissed'
+2023.01.03 09:23:25 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/build.sbt
+2023.01.03 09:24:38 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/build.sbt
+2023.01.03 09:25:12 INFO  Detected new build tool in /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/.bsp/sbt.json
+2023.01.03 09:25:12 WARN  Build server is not auto-connectable.
+2023.01.03 09:31:20 INFO  Detected new build tool in /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/.bsp/sbt.json
+2023.01.03 09:31:20 WARN  Build server is not auto-connectable.
+2023.01.03 09:32:26 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/Connection.scala
+2023.01.03 09:32:49 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/gui1.scala
+2023.01.03 09:32:52 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/Quering.scala
+2023.01.03 09:32:53 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/Model.scala
+2023.01.03 09:32:54 INFO  time: code lens generation in 2.06s
+2023.01.03 09:32:54 INFO  time: code lens generation in 1.09s
+2023.01.03 09:32:58 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/Load.scala
+2023.01.03 09:33:00 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/Quering.scala
+janv. 03, 2023 9:33:03 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 41
+2023.01.03 09:33:05 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/Quering.scala
+2023.01.03 09:33:06 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/UserInterface.scala
+2023.01.03 09:33:09 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/UserInterface.scala
+2023.01.03 09:33:10 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/UserInterface.scala
+2023.01.03 09:33:11 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/Load.scala
+2023.01.03 09:33:11 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/gui1.scala
+Exception in thread "pool-3-thread-1" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:195)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023.01.03 09:33:14 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/gui1.scala
+2023.01.03 09:33:14 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/gui1.scala
+2023.01.03 09:33:30 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/Load.scala
+2023.01.03 09:33:36 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/Loading.scala
+2023.01.03 09:33:43 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/Loading.scala
+janv. 03, 2023 9:33:45 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 112
+2023.01.03 09:33:48 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/Quering.scala
+2023.01.03 09:33:52 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/UserInterface.scala
+2023.01.03 09:33:56 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/gui1.scala
+janv. 03, 2023 9:38:54 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 320
+Exception in thread "pool-3-thread-2" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:195)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023.01.03 09:38:55 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/Quering.scala
+janv. 03, 2023 9:39:10 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 357
+janv. 03, 2023 9:39:15 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.StringIndexOutOfBoundsException: begin 622, end 636, length 599
+java.util.concurrent.CompletionException: java.lang.StringIndexOutOfBoundsException: begin 622, end 636, length 599
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:347)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:708)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2162)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.StringIndexOutOfBoundsException: begin 622, end 636, length 599
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:4601)
+	at java.base/java.lang.String.substring(String.java:2704)
+	at scala.meta.internal.metals.codeactions.FlatMapToForComprehensionCodeAction.getIndentForPos(FlatMapToForComprehensionCodeAction.scala:677)
+	at scala.meta.internal.metals.codeactions.FlatMapToForComprehensionCodeAction.$anonfun$contribute$4(FlatMapToForComprehensionCodeAction.scala:57)
+	at scala.Option.map(Option.scala:242)
+	at scala.meta.internal.metals.codeactions.FlatMapToForComprehensionCodeAction.$anonfun$contribute$3(FlatMapToForComprehensionCodeAction.scala:53)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.codeactions.FlatMapToForComprehensionCodeAction.$anonfun$contribute$2(FlatMapToForComprehensionCodeAction.scala:52)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.codeactions.FlatMapToForComprehensionCodeAction.$anonfun$contribute$1(FlatMapToForComprehensionCodeAction.scala:51)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:678)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	... 3 more
+
+2023.01.03 09:39:53 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/Quering.scala
+2023.01.03 09:42:06 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/Quering.scala
+2023.01.03 09:42:27 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/UserInterface.scala
+2023.01.03 09:48:44 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/UserInterface.scala
+2023.01.03 09:49:32 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/UserInterface.scala
+2023.01.03 09:49:50 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/UserInterface.scala
+2023.01.03 09:49:50 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/UserInterface.scala
+janv. 03, 2023 9:51:37 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1181
+janv. 03, 2023 9:51:58 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1222
+2023.01.03 09:53:59 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/UserInterface.scala
+2023.01.03 09:54:13 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/UserInterface.scala
+2023.01.03 09:54:34 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/UserInterface.scala
+2023.01.03 09:54:58 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/Loading.scala
+2023.01.03 09:55:34 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/Quering.scala
+2023.01.03 09:55:34 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/Quering.scala
+2023.01.03 09:55:46 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/Quering.scala
+janv. 03, 2023 9:56:05 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
