@@ -11,7 +11,82 @@ object Quering {
   /************************/
   
   /* HIGHEST AND LOWEST COUNTRIES */
-  def showTop10Countries() = {}
+  def min (listCountries : List[(String,Int)]) : (String,Int) = listCountries match {
+    case Nil => ("error", 0)
+    case List(x) => x
+    case head :: second :: tail => min ((if (head._2 < second._2) head else second) :: tail)
+  }
+
+  def max (listCountries : List[(String,Int)]) : (String,Int) = listCountries match {
+    case Nil => ("error", 0)
+    case List(x) => x
+    case head :: second :: tail => max ((if (head._2 > second._2) head else second) :: tail)
+  }
+
+  def length (listCountries : List[(String,Int)]) : Int = listCountries match {
+    case Nil => 0
+    case List(x) => 1
+    case head :: tail => 1 + length(tail)
+  }
+
+  def delete (listCountries : List[(String,Int)], toDelete : (String,Int)) : List[(String,Int)] = listCountries match {
+    case Nil => List()
+    case head :: tail => if (head == toDelete) {
+      delete(tail, toDelete)
+    } else {
+      head :: delete(tail, toDelete)
+    }
+  }
+
+  /* récupère les 10 pays avec le plus grand nombre d'aéroports */
+  def show10highest (listCountries : List[(String,Int)]) : List[(String,Int)] = listCountries match {
+    case Nil => List()
+    case head :: tail if (length(tail) > 9) => show10highest(delete(listCountries, min(listCountries)))
+    case _ => listCountries
+  }
+
+  /* récupère les 10 pays avec le plus petit nombre d'aéroports */
+  def showLowestCountries (listCountries : List[(String,Int)], min : (String,Int)) : List[(String,Int)] = listCountries match {
+    case Nil => List()
+    case head :: tail => if (head._2 == min._2) {
+      head :: showLowestCountries(tail, min)
+    } else {
+      showLowestCountries(tail, min)
+    }
+  }
+
+  def showTop10Countries() = {
+    var highest:HashMap[String, Int] = new HashMap()
+
+    airports.foreach
+    {
+      case (key, value) => if (highest.contains(value.iso_country)) {
+        highest.update(value.iso_country, highest.get(value.iso_country).getOrElse(-1000000) + 1)
+      } else {
+        highest.put(value.iso_country,1)
+      }
+    }
+
+    println("These are the Top 10 countries with the highest number of airports in the world")
+    show10highest(highest.toList.sortBy(_._2)).foreach{
+      case (key_x, value_x) => countries.foreach{
+        case (key_y,value_y) => if (value_y.code == key_x) {
+          println(key_y + " -> " + value_x)
+        }
+      }
+    }
+
+    println("\n")
+
+    println("These are the countries with the lowest number of airports in the world")
+    showLowestCountries(highest.toList, min(highest.toList)).foreach{
+      case (key_x, value_x) => countries.foreach{
+        case (key_y,value_y) => if (value_y.code == key_x) {
+          println(key_y + " -> " + value_x)
+        }
+      }
+    }
+  }
 
   /* TYPES OF RUNWAYS */
   def showTypeRunways() = {}
@@ -21,7 +96,7 @@ object Quering {
 
   /***** QUERY OPTION *****/
   /************************/
-  
+
   def showCountry(byIsoCode: Boolean = false): Unit = {
     if (byIsoCode){
       println("Type in the country code you want to browse")
