@@ -15,12 +15,14 @@ object Quering {
     case Nil => ("error", 0)
     case List(x) => x
     case head :: second :: tail => min ((if (head._2 < second._2) head else second) :: tail)
+    case List(_) => ("error", 0)
   }
 
   def max (listCountries : List[(String,Int)]) : (String,Int) = listCountries match {
     case Nil => ("error", 0)
     case List(x) => x
     case head :: second :: tail => max ((if (head._2 > second._2) head else second) :: tail)
+    case List(_) => ("error", 0)
   }
 
   def length (listCountries : List[(String,Int)]) : Int = listCountries match {
@@ -89,10 +91,56 @@ object Quering {
   }
 
   /* TYPES OF RUNWAYS */
-  def showTypeRunways() = {}
+
+  def type_in_list(list : List[String], element : String) : Boolean = list match {
+    case Nil => false
+    case head :: tail => if (element == head){
+      true
+    } else {
+      type_in_list(tail, element)
+    }
+  }
+
+  def showTypeRunways() = {
+    println("loading...")
+    var type_runways:HashMap[String, List[String]] = new HashMap()
+
+    airports.foreach{
+      case (key_airport, value_airport) => runways.foreach{
+        case (key_runway, value_runway) => if (key_airport == value_runway.airport_ref) {
+          if (type_runways.contains(value_airport.iso_country)) {
+            if (type_in_list(type_runways.get(value_airport.iso_country).getOrElse(List()), value_runway.surface) == false){
+              type_runways.update(value_airport.iso_country, value_runway.surface :: type_runways.get(value_airport.iso_country).getOrElse(List("error")))
+            }
+          } else {
+            type_runways.put(value_airport.iso_country, List(value_runway.surface))
+          }
+        }
+      }
+    }
+
+    type_runways.foreach{
+      case (key, value) => println(key + " -> " + value)
+    }
+  }
 
   /* TOP 10 MOST COMMON RUNWAY LATITUDE */
-  def showTop10RunwaysLatitude() = {}
+  def showTop10RunwaysLatitude() = {
+    var latitude_runways:HashMap[String, Int] = new HashMap()
+
+    runways.foreach{
+      case (key,value) => if (latitude_runways.contains(value.le_ident)) {
+        latitude_runways.update(value.le_ident, latitude_runways.get(value.le_ident).getOrElse(-100000) + 1)
+      } else {
+        latitude_runways.put(value.le_ident, 1)
+      }
+    }
+
+    println("The top 10 most common runway latitude are :")
+    show10highest(latitude_runways.toList.sortBy(_._2)).foreach{
+      case (key,value) => println(key + " -> " + value)
+    }
+  }
 
   /***** QUERY OPTION *****/
   /************************/
