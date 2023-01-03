@@ -63,7 +63,7 @@ object Quering {
           println("\n")
         }
       }
-      println("// SOME AIRPORTS MIGHT HAVE NO RUNWAYS REGISTERED IN OUR DATABASE //")
+      println("/// SOME AIRPORTS MIGHT HAVE NO RUNWAYS REGISTERED IN OUR DATABASE ///")
     }
     else{
     }
