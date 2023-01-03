@@ -68,6 +68,9 @@ object UserInterface {
   }
 
   def main(args: Array[String]): Unit = {
+    loadCountries()
+    loadAirports()
+    loadRunways()
     userInterface()
   }
 }

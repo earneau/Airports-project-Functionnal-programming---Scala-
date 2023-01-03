@@ -177,3 +177,12 @@ WARNING: Unmatched cancel notification for request id 1222
 2023.01.03 09:55:46 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/Quering.scala
 janv. 03, 2023 9:56:05 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
+2023.01.03 12:37:36 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/Loading.scala
+2023.01.03 12:38:01 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/UserInterface.scala
+2023.01.03 12:38:33 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/Loading.scala
+2023.01.03 12:38:54 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/UserInterface.scala
+2023.01.03 12:39:02 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/UserInterface.scala
+2023.01.03 12:39:48 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/Loading.scala
+2023.01.03 12:39:49 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/Loading.scala
+2023.01.03 12:39:55 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/Loading.scala
+2023.01.03 12:41:32 WARN  no build target for: /Users/evanarneau/Documents/EFREI/COURS/Functionnal Programming Scala/Airports_project/src/main/scala/Loading.scala
