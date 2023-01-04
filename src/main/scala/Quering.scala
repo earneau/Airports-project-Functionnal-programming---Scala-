@@ -57,9 +57,21 @@ object Quering {
     }
   }
 
-  def showTop10Countries() = {
-    var highest:HashMap[String, Int] = new HashMap()
+  def showTop10(): List[(String,Int)] = {
+    println("Do you want to display the top 10 countries with highest number of airports (1), or the countries with the lowest number of airports (2) ?")
+    val country = scala.io.StdIn.readLine()
+    if (country == "1"){
+      showTop10Countries(true)
+    } else if (country == "2") {
+      showTop10Countries(false)
+    } else {
+      showTop10Countries(false)
+    }
+  }
 
+  def showTop10Countries(top10: Boolean) : List[(String,Int)] = {
+    val highest:HashMap[String, Int] = new HashMap()
+    
     airports.foreach
     {
       case (key, value) => if (highest.contains(value.iso_country)) {
@@ -69,24 +81,10 @@ object Quering {
       }
     }
 
-    println("These are the Top 10 countries with the highest number of airports in the world")
-    show10highest(highest.toList.sortBy(_._2)).foreach{
-      case (key_x, value_x) => countries.foreach{
-        case (key_y,value_y) => if (value_y.code == key_x) {
-          println(key_y + " -> " + value_x)
-        }
-      }
-    }
-
-    println("\n")
-
-    println("These are the countries with the lowest number of airports in the world")
-    showLowestCountries(highest.toList, min(highest.toList)).foreach{
-      case (key_x, value_x) => countries.foreach{
-        case (key_y,value_y) => if (value_y.code == key_x) {
-          println(key_y + " -> " + value_x)
-        }
-      }
+    if (top10){
+      show10highest(highest.toList.sortBy(_._2))
+    } else {
+      showLowestCountries(highest.toList, min(highest.toList))
     }
   }
 
@@ -101,9 +99,9 @@ object Quering {
     }
   }
 
-  def showTypeRunways() = {
+  def showTypeRunways(): HashMap[String, List[String]] = {
     println("loading...")
-    var type_runways:HashMap[String, List[String]] = new HashMap()
+    val type_runways:HashMap[String, List[String]] = new HashMap()
 
     airports.foreach{
       case (key_airport, value_airport) => runways.foreach{
@@ -119,14 +117,12 @@ object Quering {
       }
     }
 
-    type_runways.foreach{
-      case (key, value) => println(key + " -> " + value)
-    }
+    type_runways
   }
 
   /* TOP 10 MOST COMMON RUNWAY LATITUDE */
-  def showTop10RunwaysLatitude() = {
-    var latitude_runways:HashMap[String, Int] = new HashMap()
+  def showTop10RunwaysLatitude(): List[(String, Int)] = {
+    val latitude_runways:HashMap[String, Int] = new HashMap()
 
     runways.foreach{
       case (key,value) => if (latitude_runways.contains(value.le_ident)) {
@@ -136,16 +132,13 @@ object Quering {
       }
     }
 
-    println("The top 10 most common runway latitude are :")
-    show10highest(latitude_runways.toList.sortBy(_._2)).foreach{
-      case (key,value) => println(key + " -> " + value)
-    }
+    show10highest(latitude_runways.toList.sortBy(_._2))
   }
 
   /***** QUERY OPTION *****/
   /************************/
 
-  def showCountry(byIsoCode: Boolean = false): Unit = {
+  def showCountry(byIsoCode: Boolean = false): HashMap[String, List[Runway]] = {
     if (byIsoCode){
       println("Type in the country code you want to browse")
     } else{
@@ -164,33 +157,33 @@ object Quering {
     }
   }
 
-  /* le problème vient du iso_country, rappel -> on fait par NOM de pays et non par code */
   def tri_par_pays(list: List[(String, Airport)], country: String, empty_list: List[(String, Airport)]): List[(String, Airport)] = list match {
     case Nil => empty_list
     case (key,value) :: tail if (value.iso_country == country) => tri_par_pays(tail, country, (key,value) :: empty_list)
     case (key,value) :: tail => tri_par_pays(tail, country, empty_list)
   }
 
-  def searchCountryAirportsAndRunways(country: String, byIsoCode: Boolean): Unit = {
+  def searchCountryAirportsAndRunways(country: String, byIsoCode: Boolean): HashMap[String, List[Runway]] = {
+    val returnRunways:HashMap[String, List[Runway]] = new HashMap()
     if(byIsoCode == true){
       /* select from code column */
-      println("You choose to browse by country code : $country")
       airports.foreach{
         case (key_airport, value_airport) => if (country == value_airport.iso_country) {
-          print("This is airport : " + value_airport.name + " in country : " + value_airport.iso_country + "\n")
           runways.foreach{
-            case (key_runway, value_runway) => if (key_airport == value_runway.airport_ref) {   /* vérifier qu'il existe des runway pour tel aéroport -> si on a pas de runway on affiche pas*/
-              println(key_runway + " -> " + value_runway)
+            case (key_runway, value_runway) => if (key_airport == value_runway.airport_ref) {   
+              if (returnRunways.contains(value_airport.name)){
+                returnRunways.update(value_airport.name, value_runway :: returnRunways.get(value_airport.name).getOrElse(Nil))
+              } else{
+                returnRunways.put(value_airport.name, List(value_runway))
+              }
             }
           }
-          println("\n")
         }
       }
-      println("/// SOME AIRPORTS MIGHT HAVE NO RUNWAYS REGISTERED IN OUR DATABASE ///")
+      returnRunways
     }
     else{
       /* select from name column */
-      println(s"You choose to browse by country name : $country")
       var empty: List[(String, Airport)] = List()
       var country_found = ""
 
@@ -207,17 +200,19 @@ object Quering {
 
       airports_tri.foreach{
         case (key_airport, value_airport) => if (current_country.code == value_airport.iso_country) {
-          print("This is airport : " + value_airport.name + " in country : " + country_found + "\n")
           runways.foreach{
-            case (key_runway, value_runway) => if (key_airport == value_runway.airport_ref) {   /* vérifier qu'il existe des runway pour tel aéroport -> si on a pas de runway on affiche pas*/
-              println(key_runway + " -> " + value_runway)
+            case (key_runway, value_runway) => if (key_airport == value_runway.airport_ref) {   
+              if (returnRunways.contains(value_airport.name)){
+                returnRunways.update(value_airport.name, value_runway :: returnRunways.get(value_airport.name).getOrElse(Nil))
+              } else{
+                returnRunways.put(value_airport.name, List(value_runway))
+              }
             }
           }
-          println("\n")
         }
       }
 
-      println("// SOME AIRPORTS MIGHT HAVE NO RUNWAYS REGISTERED IN OUR DATABASE //")
+      returnRunways
     }
   }
 }

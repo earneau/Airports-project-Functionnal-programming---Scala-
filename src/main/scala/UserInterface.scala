@@ -2,6 +2,7 @@
 import scala.annotation.tailrec
 import Loading._
 import Quering._
+import Test._
 import scala.collection.mutable.HashMap
 /*import scala.compiletime.ops.int*/
 
@@ -20,9 +21,19 @@ object UserInterface {
     val input = scala.io.StdIn.readLine()
     input match {
       case "0" => None /* EXIT APP*/
-      case "2.1" => showTop10Countries()/* QUERY */
-      case "2.2" => showTypeRunways()
-      case "2.3" => showTop10RunwaysLatitude()
+      case "2.1" => showTop10().foreach{
+        case (key_x, value_x) => countries.foreach{
+          case (key_y,value_y) => if (value_y.code == key_x) {
+            println(key_y + " -> " + value_x)
+          }
+        }
+      }
+      case "2.2" => showTypeRunways().foreach{
+        case (key, value) => println(key + " -> " + value)
+      }
+      case "2.3" => showTop10RunwaysLatitude().foreach{
+        case (key,value) => println(key + " -> " + value)
+      }
       case "_" => userInterface("ERROR: Choose a valid option !")
     }
     userInterface()
@@ -41,8 +52,12 @@ object UserInterface {
     val input = scala.io.StdIn.readLine()
     input match {
       case "0" => None /* EXIT APP*/
-      case "1.1" => showCountry(byIsoCode = true)/* QUERY */
-      case "1.2" => showCountry(byIsoCode = false)
+      case "1.1" => showCountry(byIsoCode = true).foreach{
+        case (key,value) => println(key + " -> " + value)
+      }
+      case "1.2" => showCountry(byIsoCode = false).foreach{
+        case (key,value) => println(key + " -> " + value)
+      }
       case "_" => userInterface("ERROR: Choose a valid option !")
     }
     userInterface()
@@ -71,6 +86,7 @@ object UserInterface {
     loadCountries()
     loadAirports()
     loadRunways()
+    testing()
     userInterface()
   }
 }
